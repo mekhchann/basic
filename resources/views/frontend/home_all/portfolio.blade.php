@@ -13,7 +13,7 @@
     <div class="tab-content" id="portfolioTabContent">
 
   @php
-$portfolio = App\Models\Portfolio::latest()->get();
+      $portfolio = App\Models\Portfolio::latest()->get();
   @endphp
 
 
