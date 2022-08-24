@@ -8,7 +8,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-8 col-md-10">
                     <div class="breadcrumb__wrap__content">
-                        <h2 class="title"> {{ $categoryname->blog_category }} </h2>
+                        <h2 class="title"> All Blogs </h2>
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -38,18 +38,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                  @foreach($blogpost as $item)
+                  @foreach($allblogs as $item)
                     <div class="standard__blog__post">
                         <div class="standard__blog__thumb">
-                            <a href="{{ route('blog.details',$item->id) }}"><img src="{{ asset($item->blog_image) }}" alt=""></a>
-                            <a href="{{ route('blog.details',$item->id) }}" class="blog__link"><i class="far fa-long-arrow-right"></i></a>
+                            <a href="blog-details.html"><img src="{{ asset($item->blog_image) }}" alt=""></a>
+                            <a href="blog-details.html" class="blog__link"><i class="far fa-long-arrow-right"></i></a>
                         </div>
                         <div class="standard__blog__content">
                             <div class="blog__post__avatar">
                                 <div class="thumb"><img src="{{ asset($item->blog_image) }}" alt=""></div>
                                 <span class="post__by">By : <a href="#">Halina Spond</a></span>
                             </div>
-                            <h2 class="title"><a href="{{ route('blog.details',$item->id) }}">{{ $item->blog_title }}</a></h2>
+                            <h2 class="title"><a href="blog-details.html">{{ $item->blog_title }}</a></h2>
                             <p>
                               {!! Str::limit($item->blog_description, 200) !!}
                             </p>
